@@ -1,17 +1,19 @@
 angular.module('video-player')
   .component('videoList', {
     bindings: {
-      videos: '<'
+      videos: '<',
+      onClick: '<'
     },
 
     controller: function() {
       // debugger;
+      // this.onClick = () => {};
 
-      this.$onInit = function() {
-        console.log('foo');
-        // debugger;
-        console.log('bar');
-      };
+      // this.$onInit = function() {
+      //   console.log('foo');
+      //   // debugger;
+      //   console.log('bar');
+      // };
     },
 
 

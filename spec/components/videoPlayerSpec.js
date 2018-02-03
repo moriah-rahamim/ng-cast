@@ -28,6 +28,7 @@ describe('video player', function() {
   }));
 
   it('should correctly set video property on isolate scope', function() {
+    // debugger;
     expect(catElement.isolateScope().$ctrl.video.snippet.title).to.equal(fakeVideoData[0].snippet.title);
     expect(jsElement.isolateScope().$ctrl.video.snippet.title).to.equal(moreFakeVideoData[0].snippet.title);
 

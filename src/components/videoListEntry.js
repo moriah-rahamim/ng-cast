@@ -1,13 +1,17 @@
 angular.module('video-player')
   .component('videoListEntry', {
     bindings: {
-      vid: '<'
+      video: '<',
+      onClick: '<',
+      index: '<'
     },
 
     controller: function() {
 
       this.$onInit = () => {
-        this.thumbnailImage = this.vid.snippet.thumbnails.default.url;
+        this.thumbnailImage = this.video.snippet.thumbnails.default.url;
+        this.title = this.video.snippet.title;
+        this.description = this.video.snippet.description;
       };
     },
 
