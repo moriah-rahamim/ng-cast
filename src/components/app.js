@@ -3,10 +3,10 @@ angular.module('video-player')
 
     controller: function($scope, $window) {
       this.videos = $window.exampleVideoData;
-      this.onClick = (index) => {
-        this.video = this.videos[index];
+      this.selectVideo = (index) => {
+        this.currentVideo = this.videos[index];
       };
-      this.video = this.videos[0];
+      this.currentVideo = this.videos[0];
     },
 
     templateUrl: 'src/templates/app.html'
